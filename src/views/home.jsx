@@ -2,15 +2,19 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import DonutChart from 'react-donut-chart';
 import HomeTable from "../components/HomeTable/HomeTable";
+import { connect } from 'react-redux';
+import { changeRisk } from '../redux/actions';
+import data from '../assets/data.json';
 import "./views.css"
 
-export default function Home({ data, changeHandler, selected }) {
+const mapStateProps = (state) => {
+    return {
+        selected: state.riskManagement.value
+    }
+}
+function Home({selected, changeRisk }) {
     const [view, setView] = React.useState('table');
     const navigate = useNavigate();
-
-    const handleSelection = (event) => {
-        changeHandler(Number.parseInt(event.target.value));
-    };
 
     const handleContinue = (event) => {
         if (selected !== 0) {
@@ -45,7 +49,8 @@ export default function Home({ data, changeHandler, selected }) {
                         <button
                             key={level.id}
                             className={(level.risk == selected) ? 'active' : 'free-level'}
-                            onClick={handleSelection}
+                            onClick={() => changeRisk(level.risk)}
+
                             value={level.risk}>
                             {level.risk}
                         </button>
@@ -68,3 +73,4 @@ export default function Home({ data, changeHandler, selected }) {
         </>
     );
 }
+export default connect(mapStateProps, { changeRisk })(Home)

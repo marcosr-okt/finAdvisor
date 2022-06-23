@@ -1,7 +1,17 @@
 import React from "react";
+import { connect } from 'react-redux';
 import Calculator from "../components/Calculator/Calculator";
+import data from '../assets/data.json';
 
-export default function Portfolio({ risk, selected }) {
+const mapStateProps = (state) => {
+    let risk =data.filter(risk => (risk.id == state.riskManagement.value))[0];
+    return {
+        selected: state.riskManagement.value,
+        risk: risk,
+    }
+}
+
+function Portfolio({ risk, selected }) {
     return (
         <div className="portfolio">
             <h2 className="portfolio__title">Personalized Portfolio</h2>
@@ -18,3 +28,5 @@ export default function Portfolio({ risk, selected }) {
         </div>
     );
 }
+
+export default connect(mapStateProps, null)(Portfolio);
