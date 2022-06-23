@@ -5,10 +5,8 @@ export default function Navbar() {
 
     return (
         <nav className={styles.navbar__banner}>
-            <Link to={`/`}>
-            &#127968;
-            </Link>
-            <div className="overglow--stack">
+            <Link to={`/`}>&#127968;</Link>
+            <div className={styles.navbar__title}>
                 Financial Advisor
             </div>
         </nav>

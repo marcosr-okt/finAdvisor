@@ -1,6 +1,4 @@
-const getCategories = (level) => {
-    return level.categories.map(categorie => categorie.type);
-}
+import { getCategories } from '../../utilities/utilities'
 
 export default function HomeTable({ data, selected }) {
     const headers = (data.length > 0) ? getCategories(data[0]) : [];
