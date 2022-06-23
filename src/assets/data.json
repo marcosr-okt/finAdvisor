@@ -1,0 +1,262 @@
+[
+    {
+        "id": 1,
+        "risk": 1,
+        "categories":[
+            {
+                "type": "Bonds",
+                "value": 80
+            },
+            {
+                "type": "Large Cap",
+                "value": 20
+            },
+            {
+                "type": "Mid Cap",
+                "value": 0
+            },
+            {
+                "type": "Foreign",
+                "value": 0
+            }
+            ,{
+                "type": "Small Cap",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "risk": 2,
+        "categories":[
+            {
+                "type": "Bonds",
+                "value": 70
+            },
+            {
+                "type": "Large Cap",
+                "value": 15
+            },
+            {
+                "type": "Mid Cap",
+                "value": 15
+            },
+            {
+                "type": "Foreign",
+                "value": 0
+            }
+            ,{
+                "type": "Small Cap",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "risk": 3,
+        "categories":[
+            {
+                "type": "Bonds",
+                "value": 60
+            },
+            {
+                "type": "Large Cap",
+                "value": 15
+            },
+            {
+                "type": "Mid Cap",
+                "value": 25
+            },
+            {
+                "type": "Foreign",
+                "value": 10
+            }
+            ,{
+                "type": "Small Cap",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "risk": 4,
+        "categories":[
+            {
+                "type": "Bonds",
+                "value": 50
+            },
+            {
+                "type": "Large Cap",
+                "value": 20
+            },
+            {
+                "type": "Mid Cap",
+                "value": 20
+            },
+            {
+                "type": "Foreign",
+                "value": 10
+            }
+            ,{
+                "type": "Small Cap",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "risk": 5,
+        "categories":[
+            {
+                "type": "Bonds",
+                "value": 40
+            },
+            {
+                "type": "Large Cap",
+                "value": 20
+            },
+            {
+                "type": "Mid Cap",
+                "value": 20
+            },
+            {
+                "type": "Foreign",
+                "value": 20
+            }
+            ,{
+                "type": "Small Cap",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "risk": 6,
+        "categories":[
+            {
+                "type": "Bonds",
+                "value": 35
+            },
+            {
+                "type": "Large Cap",
+                "value": 25
+            },
+            {
+                "type": "Mid Cap",
+                "value": 5
+            },
+            {
+                "type": "Foreign",
+                "value": 30
+            }
+            ,{
+                "type": "Small Cap",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "risk": 7,
+        "categories":[
+            {
+                "type": "Bonds",
+                "value": 20
+            },
+            {
+                "type": "Large Cap",
+                "value": 25
+            },
+            {
+                "type": "Mid Cap",
+                "value": 25
+            },
+            {
+                "type": "Foreign",
+                "value": 25
+            }
+            ,{
+                "type": "Small Cap",
+                "value": 5
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "risk": 8,
+        "categories":[
+            {
+                "type": "Bonds",
+                "value": 10
+            },
+            {
+                "type": "Large Cap",
+                "value": 20
+            },
+            {
+                "type": "Mid Cap",
+                "value": 40
+            },
+            {
+                "type": "Foreign",
+                "value": 20
+            }
+            ,{
+                "type": "Small Cap",
+                "value": 10
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "risk": 9,
+        "categories":[
+            {
+                "type": "Bonds",
+                "value": 5
+            },
+            {
+                "type": "Large Cap",
+                "value": 15
+            },
+            {
+                "type": "Mid Cap",
+                "value": 40
+            },
+            {
+                "type": "Foreign",
+                "value": 25
+            }
+            ,{
+                "type": "Small Cap",
+                "value": 15
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "risk": 10,
+        "categories":[
+            {
+                "type": "Bonds",
+                "value": 0
+            },
+            {
+                "type": "Large Cap",
+                "value": 5
+            },
+            {
+                "type": "Mid Cap",
+                "value": 25
+            },
+            {
+                "type": "Foreign",
+                "value": 30
+            }
+            ,{
+                "type": "Small Cap",
+                "value": 40
+            }
+        ]
+    }
+]

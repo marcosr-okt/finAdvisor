@@ -1,0 +1,144 @@
+.home__title, .calculator__title {
+    text-align: center;
+    font-size: 1rem;
+}
+.calculator__subtitle{
+    font-size: 1rem;
+}
+
+button, button:active{
+    outline: none;
+    border: 1px solid var(--header-color);
+    border-radius: 6px;
+    margin: 0px 2px 8px 2px;
+    background-color: white;
+    display: inline-block;
+}
+.row {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 80%;
+    text-align: center;
+}
+
+.row p, .row div{
+    border: 1px solid var(--header-color);
+}
+
+.home__list {
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+
+.free-level:hover {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+
+button.selected-level {
+    background-color: var(--main-color);
+}
+
+
+.home__table_item.selected {
+    background-color: var(--secondary-color);
+    font-weight: bolder;
+}
+
+.home__list_continue {
+    font-weight: 700;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+.home__list_continue.locked {
+    cursor: default;
+    font-weight: 700;
+    background-color: var(--secondary-color);
+}
+
+.home__view-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.home__view-selector button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.home__view-selector button.selected {
+    cursor: default;
+    background-color: var(--main-color);
+}
+
+.calculator__header {
+    display: grid;
+    margin: 0 auto;
+    width: 80%;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    justify-items: center;
+}
+
+.calculator__header > * {
+    border: 1px solid red;
+}
+.calculator__header > div:nth-child(1){
+    grid-column: 1/3;
+}
+
+.rowType{
+    display: grid;
+    grid-column: 1/6;
+    grid-template-columns: repeat(4, 1fr);
+}
+.rowType input{
+    width: 80%;
+    text-align: right;
+}
+.rowType label{
+    text-align: left;
+}
+.donut__chart{
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.donutchart{
+   height: 50px;
+   width:50px;
+}
+.calculator__table{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+}
+.calculator__table_values{
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 4px;
+}
+.calculator__table_recommendation{
+    border: 1px solid green;
+    text-align: center;
+}
+.calculator__rebalance-button{
+    background-color: var(--secondary-color);
+}
+.calculator__rebalance-container{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}

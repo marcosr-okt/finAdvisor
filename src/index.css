@@ -1,0 +1,8 @@
+:root{
+    --main-color: rgb(85, 171, 23);
+    --secondary-color: rgb(168, 224, 128);
+    --header-color: rgba(170, 170, 170);
+}
+body{
+    margin: 0;
+}
