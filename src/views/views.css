@@ -2,7 +2,8 @@
     text-align: center;
     font-size: 1.4rem;
 }
-.home__table_header{
+
+.home__table_header {
     background-color: var(--secondary-color);
     font-weight: bolder;
 }
@@ -16,9 +17,10 @@ button {
     font-weight: 700;
 }
 
-button.active:hover{
+button.active:hover {
     cursor: default;
 }
+
 .row {
     margin: 0 auto;
     display: grid;
@@ -27,7 +29,8 @@ button.active:hover{
     text-align: center;
 }
 
-.row p, .row div {
+.row p,
+.row div {
     border: 1px solid var(--header-color);
 }
 
@@ -40,7 +43,7 @@ button.active:hover{
     width: 80%;
 }
 
-.home__list button{
+.home__list button {
     padding: 20px;
 }
 
@@ -49,7 +52,7 @@ button.active:hover{
     cursor: pointer;
 }
 
-button.active{
+button.active {
     background-color: var(--main-color);
 }
 
@@ -88,8 +91,10 @@ button.active{
 
 .calculator__header {
     margin-top: 1rem;
+    margin-bottom: .5rem;
     vertical-align: center;
     align-content: center;
+    font-weight: 500;
 }
 
 .calculator__table-row {
@@ -114,6 +119,7 @@ button.active{
 }
 
 .calculator__table {
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-flow: column;
@@ -138,6 +144,7 @@ button.active{
     border: 2px solid black;
     text-align: center;
 }
+
 .calculator__rebalance-container {
     display: flex;
     justify-content: space-around;
@@ -147,13 +154,22 @@ button.active{
 .calculator__rebalance-button {
     margin: 0;
     padding: 10px;
-    background-color: var(--secondary-color);
+    background-color: var(--main-color);
 }
 
-.portfolio{
+.calculator__rebalance-button:hover {
+    cursor: pointer;
+}
+
+.calculator__rebalance-button.locked {
+    background-color: var(--secondary-color);
+    cursor: default;
+}
+
+.portfolio {
     margin: 0 auto;
     width: 90%;
-    margin-top: 20%;
+    padding-top: 10%;
 }
 
 .portfolio__title {
@@ -183,11 +199,34 @@ button.active{
 }
 
 @media (min-width: 800px) {
-    .home__list button{
+    .home__list button {
         padding: 25px;
     }
-    .portfolio{
+
+    .portfolio {
         margin: 0 auto;
-        width: 60%;
+        width: 80%;
+    }
+
+    .calculator__table {
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+
+    .calculator__table_recommendation {
+        flex-grow: 1;
+        width: 300px;
+    }
+
+    .calculator__table_recommendation ul {
+        overflow-y: scroll;
+        padding: .5rem;
+    }
+
+    .home__container {
+        padding-top: 10%;
+        width: 70%;
+        margin: 0 auto;
     }
 }
