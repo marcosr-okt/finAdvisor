@@ -50,5 +50,6 @@ Once all dependencies are installed, go the url displayed on the terminal like t
 
 ### User experience
 
+Video tutorial for installing the advisor 
 [![Watch the video](./screenshots/homepage_chart.png)](https://youtu.be/WaGARp-9SSU)
-[![Watch the video](./screenshots/homepage_chart.png)](https://youtu.be/ZHBO5FjY5GQ)
+[Video tutorial of features](https://youtu.be/ZHBO5FjY5GQ)
