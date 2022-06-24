@@ -1,8 +1,20 @@
-:root{
+:root {
     --main-color: rgb(85, 171, 23);
     --secondary-color: rgb(168, 224, 128);
     --header-color: rgba(170, 170, 170);
+    --row-header-color: rgb(237, 233, 233);
 }
-body{
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
     margin: 0;
+}
+
+.App {
+    margin: 0;
+    padding: 0;
 }
