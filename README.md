@@ -49,3 +49,6 @@ Once all dependencies are installed, go the url displayed on the terminal like t
 ![Preview for the local deploy](./screenshots/page_host.png)
 
 ### User experience
+
+[![Watch the video](./screenshots/homepage_chart.png)](https://youtu.be/WaGARp-9SSU)
+[![Watch the video](./screenshots/homepage_chart.png)](https://youtu.be/ZHBO5FjY5GQ)
