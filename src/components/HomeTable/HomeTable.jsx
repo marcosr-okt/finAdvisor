@@ -15,13 +15,13 @@ export default function HomeTable({ data, selected }) {
           key={level.id}
           className={
             level.risk == selected
-              ? "home__table_item row selected"
-              : "home__table_item row"
+              ? "row active"
+              : "row"
           }
         >
           <div> {level.risk}</div>
-          {level.categories.map((categorie, index) => (
-            <div key={index}>{categorie.value}</div>
+          {level.categories.map((category, index) => (
+            <div key={index}>{category.value}</div>
           ))}
         </div>
       ))}

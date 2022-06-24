@@ -43,7 +43,7 @@ function RiskSelector({ selected, changeRisk }) {
         {data.map((level) => (
           <button
             key={level.id}
-            className={level.risk == selected ? styles.active : styles.free}
+            className={level.risk == selected ? "active__button" : "free__button"}
             onClick={() => changeRisk(level.risk)}
             value={level.risk}
           >
@@ -61,7 +61,7 @@ function RiskSelector({ selected, changeRisk }) {
       </div>
       <div className={styles.home__view_selector}>
         <button
-          className={view == "table" ? styles.active : ""}
+          className={view == "table" ? "active" : ""}
           onClick={() => {
             handleViewChange("table");
           }}
@@ -69,7 +69,7 @@ function RiskSelector({ selected, changeRisk }) {
           Table view
         </button>
         <button
-          className={view == "chart" ? styles.active : ""}
+          className={view == "chart" ? "active" : ""}
           onClick={() => {
             handleViewChange("chart");
           }}

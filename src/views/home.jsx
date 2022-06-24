@@ -8,7 +8,7 @@ export default function Home() {
       <h2 className="home__title">
         Please Select A Risk Level For Your Investment Portfolio
       </h2>
-      <RiskSelector/>
+      <RiskSelector />
     </div>
   );
 }

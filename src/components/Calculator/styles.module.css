@@ -4,3 +4,74 @@
     gap: 10px;
     margin-top: 10px;
 }
+
+.calculator__header {
+    text-align: center;
+    font-weight: 500;
+}
+
+.calculator__table_row {
+    display: grid;
+    margin-bottom: .2rem;
+    grid-column: 1/5;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.calculator__table_row input {
+    width: 80%;
+    text-align: right;
+    display: inline-block;
+}
+
+.calculator__table_row label {
+    text-align: left;
+}
+
+.calculator__table {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    font-size: .9rem;
+}
+
+.calculator__table_values {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    place-items: center;
+    text-align: center;
+    font-size: .9rem;
+}
+
+.calculator__table_recommendation {
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+}
+
+.calculator__table_recommendation.calculator__header {
+    margin: 2px auto;
+}
+
+.calculator__table_recommendation>div:nth-child(2) {
+    border: 2px solid black;
+    text-align: center;
+    min-height: 100px;
+    flex-grow: 1;
+}
+
+@media (min-width: 800px) {
+
+    .calculator__table {
+        flex-flow: row;
+    }
+
+    .calculator__table_recommendation {
+        width: 300px;
+    }
+
+    .calculator__table_recommendation ul {
+        overflow-y: scroll;
+    }
+}

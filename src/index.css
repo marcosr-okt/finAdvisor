@@ -5,9 +5,13 @@
     --row-header-color: rgb(237, 233, 233);
 }
 
+* {
+    box-sizing: border-box;
+
+}
+
 body {
     margin: 0;
-    box-sizing: border-box;
 }
 
 .App {

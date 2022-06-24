@@ -26,12 +26,19 @@ function Calculator({ risk, selected }) {
 
   const verifyNumbers = () => {
     if (risk.risk == 0) {
+      setRecommendations(['Please, select your preference']);
       return false;
     }
-    let table = Array.from(document.querySelectorAll(".calculator__table-row"));
-    return table.every(
+    let table = Array.from(
+      document.querySelectorAll("." + styles.calculator__table_row)
+    );
+    let allValid = table.every(
       (row) => parseFloat(row.querySelector(".user_input").value) >= 0
     );
+    if(!allValid){
+      setRecommendations(['Please, numbers have to be positive when a preference is selected']);
+    }
+    return allValid;
   };
 
   const getRecomendations = (exceedArray, lackArray) => {
@@ -40,11 +47,11 @@ function Calculator({ risk, selected }) {
   };
 
   const handleRebalance = () => {
-    let isModified = verifyNumbers();
-    if (!isModified) {
+    let allValid = verifyNumbers();
+    if (!allValid) {
       return;
     }
-    let table = document.querySelectorAll(".calculator__table-row");
+    let table = document.querySelectorAll("." + styles.calculator__table_row);
     let { valuesToTransfer, valuesToAdd } = calculateItemsToBalance(table);
     getRecomendations([...valuesToTransfer], [...valuesToAdd]);
   };
@@ -52,14 +59,14 @@ function Calculator({ risk, selected }) {
   return (
     <>
       <div className="table_header row">
-        <div>Risk</div>
+        {selected !== 0 && <div>Risk</div>}
         {selected !== 0 &&
           risk.categories.map((level, index) => (
             <div key={index}>{level.type}</div>
           ))}
       </div>
       <div className="row">
-        <div>{selected}</div>
+      {selected !== 0 && <div>{selected}</div>}
         {selected !== 0 &&
           risk.categories.map((level, index) => (
             <div key={index}>{level.value} %</div>
@@ -69,24 +76,22 @@ function Calculator({ risk, selected }) {
         <p>Please Enter Your Current Portfolio</p>
         <button
           onClick={handleRebalance}
-          className={
-            risk.risk == 0 ? "active__button locked__button" : "active__button"
-          }
+          className={risk.risk == 0 ? "locked__button" : "active__button"}
         >
           Rebalance
         </button>
       </div>
-      <div className="calculator__table">
-        <div className="calculator__table_values">
-          <div className="calculator__header"></div>
-          <div className="calculator__header">Current Amount</div>
-          <div className="calculator__header">Difference</div>
-          <div className="calculator__header">New Amount</div>
+      <div className={styles.calculator__table}>
+        <div className={styles.calculator__table_values}>
+          <div className={styles.calculator__header}></div>
+          <div className={styles.calculator__header}>Current Amount</div>
+          <div className={styles.calculator__header}>Difference</div>
+          <div className={styles.calculator__header}>New Amount</div>
           {risk.categories.map((level, index) => {
             return (
               <div
                 key={index}
-                className="calculator__table-row"
+                className={styles.calculator__table_row}
                 data-weight={level.value}
               >
                 <label data-label={level.type}>{level.type} $</label>
@@ -101,13 +106,15 @@ function Calculator({ risk, selected }) {
             );
           })}
         </div>
-        <div className="calculator__table_recommendation">
-          <div className="calculator__header">Recommended Transfers</div>
-          <ul>
-            {recomendations.map((recomendation, index) => (
-              <li key={index}>{recomendation}</li>
-            ))}
-          </ul>
+        <div className={styles.calculator__table_recommendation}>
+          <div className={styles.calculator__header}>Recommended Transfers</div>
+          <div>
+            <ul>
+              {recomendations.map((recomendation, index) => (
+                <li key={index}>{recomendation}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </>
