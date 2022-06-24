@@ -4,13 +4,29 @@ import {
   balanceData,
   calculateItemsToBalance,
 } from "../../utilities/utilities";
+import data from "../../assets/data.json";
+import { zeroState } from "../../assets/constants";
+import styles from "./styles.module.css";
 
-function Calculator({ risk }) {
+const mapStateProps = (state) => {
+  let risk;
+  if (state.preference.value == 0) {
+    risk = { ...zeroState };
+  } else {
+    risk = data.filter((risk) => risk.risk === state.preference.value)[0];
+  }
+  return {
+    selected: state.preference.value,
+    risk: risk,
+  };
+};
+
+function Calculator({ risk, selected }) {
   const [recomendations, setRecommendations] = React.useState([]);
 
   const verifyNumbers = () => {
-    if(risk.risk == 0){
-        return false;
+    if (risk.risk == 0) {
+      return false;
     }
     let table = Array.from(document.querySelectorAll(".calculator__table-row"));
     return table.every(
@@ -35,14 +51,26 @@ function Calculator({ risk }) {
 
   return (
     <>
-      <div className="calculator__rebalance-container">
+      <div className="table_header row">
+        <div>Risk</div>
+        {selected !== 0 &&
+          risk.categories.map((level, index) => (
+            <div key={index}>{level.type}</div>
+          ))}
+      </div>
+      <div className="row">
+        <div>{selected}</div>
+        {selected !== 0 &&
+          risk.categories.map((level, index) => (
+            <div key={index}>{level.value} %</div>
+          ))}
+      </div>
+      <div className={styles.rebalance_container}>
         <p>Please Enter Your Current Portfolio</p>
         <button
           onClick={handleRebalance}
           className={
-            risk.risk == 0
-              ? "calculator__rebalance-button locked"
-              : "calculator__rebalance-button"
+            risk.risk == 0 ? "active__button locked__button" : "active__button"
           }
         >
           Rebalance
@@ -64,11 +92,11 @@ function Calculator({ risk }) {
                 <label data-label={level.type}>{level.type} $</label>
                 <input type="number" min="0" className="user_input" />
                 <input
-                  disabled
                   type="number"
                   className="user_difference"
+                  disabled
                 ></input>
-                <input disabled type="number" className="user_new"></input>
+                <input type="number" className="user_new" disabled></input>
               </div>
             );
           })}
@@ -85,4 +113,4 @@ function Calculator({ risk }) {
     </>
   );
 }
-export default connect(null, null)(Calculator);
+export default connect(mapStateProps, null)(Calculator);

@@ -4,7 +4,7 @@ export default function HomeTable({ data, selected }) {
   const headers = data.length > 0 ? getCategories(data[0]) : [];
   return (
     <>
-      <div className="home__table_header row">
+      <div className="table_header row">
         <div>Risk</div>
         {headers.map((value, index) => (
           <div key={index}>{value} %</div>

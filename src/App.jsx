@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./views/home";
 import Error from "./views/error";
 import Layout from "./views/layout";
-import "./App.css";
 import Portfolio from "./views/portfolio";
 
 function App() {

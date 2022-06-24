@@ -1,9 +1,20 @@
+.layout {
+    width: 100vw;
+    height: 100vh;
+}
+
+.home__container, .portfolio {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+}
+
 .home__title {
     text-align: center;
     font-size: 1.4rem;
 }
 
-.home__table_header {
+.table_header {
     background-color: var(--secondary-color);
     font-weight: bolder;
 }
@@ -12,86 +23,42 @@ button {
     outline: none;
     border: 2px solid black;
     border-radius: 6px;
-    margin: 0px 2px 8px 2px;
+    margin: 0px 2px 6px 2px;
     display: inline-block;
     font-weight: 700;
 }
 
-button.active:hover {
+.active__button {
+    background-color: var(--main-color);
+}
+
+.active__button:hover {
+    cursor: pointer;
+}
+
+.locked__button {
     cursor: default;
+    background-color: var(--main-color);
 }
 
 .row {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    width: 90%;
+    width: 100%;
     text-align: center;
 }
 
-.row p,
 .row div {
     border: 1px solid var(--header-color);
 }
-
-.home__list {
-    margin: 2rem auto;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 80%;
-}
-
-.home__list button {
-    padding: 20px;
-}
-
-.free-level:hover {
-    background-color: var(--secondary-color);
-    cursor: pointer;
-}
-
-button.active {
-    background-color: var(--main-color);
-}
-
 
 .home__table_item.selected {
     background-color: var(--secondary-color);
     font-weight: bolder;
 }
 
-.home__list_continue {
-    font-weight: 700;
-    background-color: var(--main-color);
-    cursor: pointer;
-}
-
-.home__list_continue.locked {
-    cursor: default;
-    background-color: var(--secondary-color);
-}
-
-.home__view-selector {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
-
-.home__view-selector button {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.home__view-selector button.selected {
-    cursor: default;
-    background-color: var(--main-color);
-}
-
 .calculator__header {
-    margin-top: 1rem;
-    margin-bottom: .5rem;
     vertical-align: center;
     align-content: center;
     font-weight: 500;
@@ -112,12 +79,6 @@ button.active {
     text-align: left;
 }
 
-.donut__chart {
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
 .calculator__table {
     width: 90%;
     margin: 0 auto;
@@ -128,9 +89,12 @@ button.active {
 .calculator__table_values {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     place-items: center;
     text-align: center;
-    gap: 4px;
+    font-size: .9rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .calculator__table_recommendation {
@@ -143,33 +107,6 @@ button.active {
     margin-top: 0;
     border: 2px solid black;
     text-align: center;
-}
-
-.calculator__rebalance-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.calculator__rebalance-button {
-    margin: 0;
-    padding: 10px;
-    background-color: var(--main-color);
-}
-
-.calculator__rebalance-button:hover {
-    cursor: pointer;
-}
-
-.calculator__rebalance-button.locked {
-    background-color: var(--secondary-color);
-    cursor: default;
-}
-
-.portfolio {
-    margin: 0 auto;
-    width: 90%;
-    padding-top: 10%;
 }
 
 .portfolio__title {
@@ -199,9 +136,6 @@ button.active {
 }
 
 @media (min-width: 800px) {
-    .home__list button {
-        padding: 25px;
-    }
 
     .portfolio {
         margin: 0 auto;
@@ -225,7 +159,6 @@ button.active {
     }
 
     .home__container {
-        padding-top: 10%;
         width: 70%;
         margin: 0 auto;
     }

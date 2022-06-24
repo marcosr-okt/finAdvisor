@@ -1,0 +1,53 @@
+.home__list {
+    margin: 1rem auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.home__list button {
+    padding: 20px;
+}
+
+button.active {
+    font-weight: 700;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+.locked {
+    cursor: default;
+    background-color: var(--secondary-color);
+}
+
+.active {
+    background-color: var(--main-color);
+}
+
+.free:hover {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.home__view_selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.home__view_selector button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.donut__chart {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+
+}
