@@ -3,11 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./views/home";
 import Error from "./views/error";
 import Layout from "./views/layout";
-import data from './assets/data.json'
 import "./App.css"
 import Portfolio from "./views/portfolio";
-
-let selectedRisk = {};
 
 function App() {
   return (
@@ -15,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home/>} />
-          <Route path="calculator" element={<Portfolio risk={selectedRisk}/>} />
+          <Route path="calculator" element={<Portfolio/>} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

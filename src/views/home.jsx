@@ -9,7 +9,7 @@ import "./views.css"
 
 const mapStateProps = (state) => {
     return {
-        selected: state.riskManagement.value
+        selected: state.preference.value
     }
 }
 function Home({selected, changeRisk }) {

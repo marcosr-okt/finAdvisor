@@ -2,13 +2,7 @@ import React from "react";
 import { connect } from 'react-redux';
 import { balanceData, calculateItemsToBalance } from '../../utilities/utilities';
 
-const mapStateProps = (state) => {
-    return {
-        selected: state.riskManagement.value
-    }
-}
-
-function Calculator({ risk, selected }) {
+function Calculator({ risk }) {
     const [recomendations, setRecommendations] = React.useState([]);
 
     const verifyNumbers = () => {
@@ -66,4 +60,4 @@ function Calculator({ risk, selected }) {
         </>
     )
 }
-export default connect(mapStateProps, null)(Calculator)
+export default connect(null, null)(Calculator)

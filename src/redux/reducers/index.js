@@ -1,4 +1,4 @@
 import { combineReducers } from "redux";
-import riskManagement from "./riskManagement";
+import preference from "./preference";
 
-export default combineReducers({riskManagement });
+export default combineReducers({preference,});

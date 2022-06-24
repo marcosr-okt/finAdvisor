@@ -7,7 +7,7 @@
     font-weight: bolder;
 }
 
-button, button:active {
+button {
     outline: none;
     border: 2px solid black;
     border-radius: 6px;

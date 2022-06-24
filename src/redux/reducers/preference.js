@@ -9,7 +9,6 @@ export default function (state = initialState, action) {
         case CHANGE_RISK: {
             const { content } = action.payload;
             return {
-                ...state,
                 value: content
             };
         }
